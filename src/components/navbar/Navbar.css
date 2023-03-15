@@ -1,0 +1,194 @@
+.gpt3__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+}
+
+.gpt3__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gpt3__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.gpt3__navbar-links_logo img {
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.gpt3__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.gpt3__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.gpt3__navbar-links_container p,
+.gpt3__navbar-sign p,
+.gpt3__navbar-menu_container p {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.gpt3__navbar-sign button,
+.gpt3__navbar-menu_container button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #FF4820;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* .gpt3__navbar-sign button: Selects all button elements within elements with the class "gpt3__navbar-sign".
+.gpt3__navbar-menu_container button: Selects all button elements within elements with the class "gpt3__navbar-menu_container".
+padding: 0.5rem 1rem;: Sets the padding on the top/bottom to 0.5 "rems" and the padding on the left/right to 1 "rem".
+color: #fff;: Sets the font color to white.
+background: #FF4820;: Sets the background color to a specific shade of orange.
+font-family: var(--font-family);: Sets the font family to a CSS variable named "--font-family".
+font-weight: 500;: Sets the font weight to 500 (which is semi-bold).
+font-size: 18px;: Sets the font size to 18 pixels.
+line-height: 25px;: Sets the line height to 25 pixels.
+border: none;: Removes the border around the button.
+outline: none;: Removes the outline around the button when it is clicked.
+cursor: pointer;: Changes the cursor to a pointer when hovering over the button.
+border-radius: 5px;: Sets the border radius to 5 pixels (which rounds the corners of the button). */
+
+.gpt3__navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+/* .gpt3__navbar-menu: Selects elements with the class "gpt3__navbar-menu".
+margin-left: 1rem;: Sets a margin of 1 "rem" on the left side of the element.
+display: none;: Hides the element.
+position: relative;: Sets the position of the element to relative. */
+
+.gpt3__navbar-menu svg {
+    cursor: pointer;
+}
+/* .gpt3__navbar-menu svg: Selects all SVG elements within elements with the class "gpt3__navbar-menu".
+cursor: pointer;: Changes the cursor to a pointer when hovering over the SVG element. */
+
+.gpt3__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+    background: var(--color-footer);
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+}
+
+/* .gpt3__navbar-menu_container: this is a selector that selects an HTML element with the class gpt3__navbar-menu_container.
+display: flex;: sets the container to use flexbox layout.
+justify-content: flex-end;: aligns the container's items along the horizontal axis to the end.
+align-items: flex-end;: aligns the container's items along the vertical axis to the end.
+flex-direction: column;: stacks the container's items vertically instead of horizontally.
+text-align: end;: aligns the text inside the container to the end.
+background: var(--color-footer);: sets the background color to a variable named --color-footer.
+padding: 2rem;: sets the padding of the container to 2rem.
+position: absolute;: positions the container relative to its closest positioned ancestor.
+right: 0;: positions the container to the right of its closest positioned ancestor.
+top: 40px;: positions the container 40px from the top of its closest positioned ancestor.
+margin-top: 1rem;: sets the margin at the top of the container to 1rem.
+min-width: 210px;: sets the minimum width of the container to 210px.
+border-radius: 5px;: sets the border radius of the container to 5px.
+box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);: sets a shadow effect to the container. */
+
+.gpt3__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.gpt3__navbar-menu_container-links-sign {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .gpt3__navbar-links_container {
+        display: none;
+    }
+
+    .gpt3__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gpt3__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gpt3__navbar {
+        padding: 2rem;
+    }
+
+    .gpt3__navbar-sign {
+        display: none;
+    }
+
+    .gpt3__navbar-menu_container {
+        top: 20px;
+    }
+
+    .gpt3__navbar-menu_container-links-sign {
+        display: block;
+    }
+}
+
+/* @media screen and (max-width: 1050px) targets screens with a maximum width of 1050px.
+
+.gpt3__navbar-links_container and .gpt3__navbar-menu are selectors that will be affected by this media query.
+
+display: none is used to hide the .gpt3__navbar-links_container selector when the screen width is 1050px or less.
+
+display: flex is used to show the .gpt3__navbar-menu selector when the screen width is 1050px or less.
+
+@media screen and (max-width: 700px) targets screens with a maximum width of 700px.
+
+.gpt3__navbar is a selector that will be affected by this media query.
+
+padding: 2rem 4rem is used to set the padding of .gpt3__navbar to 2rem at the top and bottom and 4rem on the left and right when the screen width is 700px or less.
+
+@media screen and (max-width: 550px) targets screens with a maximum width of 550px.
+
+.gpt3__navbar, .gpt3__navbar-sign, .gpt3__navbar-menu_container, and .gpt3__navbar-menu_container-links-sign are selectors that will be affected by this media query.
+
+padding: 2rem is used to set the padding of .gpt3__navbar to 2rem at the top, bottom, left and right when the screen width is 550px or less.
+
+display: none is used to hide the .gpt3__navbar-sign selector when the screen width is 550px or less.
+
+top: 20px is used to set the top position of .gpt3__navbar-menu_container to 20px when the screen width is 550px or less.
+
+display: block is used to show the .gpt3__navbar-menu_container-links-sign selector when the screen width is 550px or less. */
